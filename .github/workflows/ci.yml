@@ -49,4 +49,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - name: Run benchmarks
+        # Continue running all benchmarks even if some fail to get complete performance data
         run: cargo bench --all --no-fail-fast
